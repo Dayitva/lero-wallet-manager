@@ -81,10 +81,10 @@ export default function WalletPage({ params }: { params: { walletId: string } })
 
   return (
     <div className="container max-w-4xl mx-auto p-4 space-y-6">
-      <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
+      {/* <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4">
         <ArrowLeft className="mr-2" size={20} />
         <span>Back to Wallets</span>
-      </Link>
+      </Link> */}
 
       <Card className="border border-gray-200 shadow-sm">
         <CardHeader className="flex justify-between items-center px-6 py-4 bg-gray-50">

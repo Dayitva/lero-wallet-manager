@@ -17,7 +17,7 @@ export async function GET() {
   try {
     const allWallets = await Wallet.listWallets();
     const wallets = await Promise.all(
-      allWallets.map(async (wallet) => {
+      allWallets.data.map(async (wallet) => {
         try {
           await wallet.getDefaultAddress();
           return wallet;

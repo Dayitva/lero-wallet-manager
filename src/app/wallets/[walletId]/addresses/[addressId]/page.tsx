@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from "next/link";
-import { ArrowLeft, CreditCard, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, CreditCard, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardBody, CardHeader, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Button, Spinner, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Tooltip } from "@nextui-org/react";
 import { AddressResponse } from '@/app/api/wallets/[walletId]/addresses/[addressId]/route';
 import CustomInput from '@/app/components/CustomInput';
@@ -232,17 +232,23 @@ export default function AddressPage({ params }: { params: { walletId: string, ad
 
   return (
     <div className="container max-w-4xl mx-auto p-4 space-y-6">
-      <Link href={`/wallets/${address.walletId}`} className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 mb-4">
-        <ArrowLeft className="mr-2" size={20} />
-        <span>Back to Wallet</span>
-      </Link>
+      <div className="flex justify-between mb-4">
+        <Link href={`/wallets/${address.walletId}`} className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+          <ArrowLeft className="mr-2" size={20} />
+          <span>Back to Wallet</span>
+        </Link>
+        <Link href={`/dashboard`} className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+          <span>Dashboard</span>
+          <ArrowRight className="ml-2" size={20} />
+        </Link>
+      </div>
 
       <Card className="border border-gray-200 dark:border-gray-700 shadow-sm">
         <CardHeader className="flex justify-between items-center px-6 py-4 bg-gray-50 dark:bg-gray-800">
-          <div className="flex items-center gap-3">
-            <CreditCard size={24} className="text-blue-600 dark:text-blue-400" />
+          <h1 className="text-lg text-gray-800 dark:text-gray-200 font-semibold">Address Details</h1>
+            <div className="flex items-center gap-3">
+            {/* <CreditCard size={20} className="text-blue-600 dark:text-blue-400" /> */}
             <div>
-              <h1 className="text-lg text-gray-800 dark:text-gray-200 font-semibold">Address Details</h1>
               <p className="text-sm text-gray-500 dark:text-gray-800">ID: {address.id}</p>
             </div>
           </div>
@@ -344,7 +350,7 @@ export default function AddressPage({ params }: { params: { walletId: string, ad
       <div className="grid grid-cols-1 gap-6">
         {isMainnet ? onrampCard : faucetCard }
 
-        <Card className="border border-gray-200 shadow-sm">
+        {/* <Card className="border border-gray-200 shadow-sm">
           <CardHeader className="px-6 py-4 bg-gray-50">
             <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-800">Create Transfer</h2>
           </CardHeader>
@@ -378,7 +384,7 @@ export default function AddressPage({ params }: { params: { walletId: string, ad
                 content="Deploy your Vercel template to enable transfers"
                 isDisabled={!mainnetDisabled}
               >
-                <div className="w-full"> {/* Wrapper div for the button */}
+                <div className="w-full">
                   <Button
                     color="primary"
                     type="submit"
@@ -417,7 +423,7 @@ export default function AddressPage({ params }: { params: { walletId: string, ad
               </div>
             )}
           </CardBody>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );

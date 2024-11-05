@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { LeroLandingPageComponent } from "../components/lero-landing-page";
+import { LeroLandingPageComponent } from "../../components/lero-landing-page";
 
 export default function Home() {
   return (

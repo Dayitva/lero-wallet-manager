@@ -13,19 +13,19 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'CDP Wallet Manager',
-  description: 'Explore a web3 wallet manager built with CDP (Coinbase Developer Platform) SDK.',
+  title: 'Lero Wallet Manager',
+  description: 'Manage your AI agents from this dashboard.',
   openGraph: {
-    title: 'CDP Wallet Manager',
-    description: 'Explore a web3 wallet manager built with CDP (Coinbase Developer Platform) SDK.',
-    url: 'https://cdp-wallet-manager-self.vercel.app/',
-    siteName: 'CDP Wallet Manager',
+    title: 'Lero Wallet Manager',
+    description: 'Manage your AI agents from this dashboard.',
+    url: 'https://lero-wallet-manager.vercel.app/',
+    siteName: 'Lero Wallet Manager',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CDP Wallet Manager',
+    title: 'Lero Wallet Manager',
     description: 'Explore a web3 wallet manager built with CDP (Coinbase Developer Platform) SDK.',
   },
 }
@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200`}>
         <Providers>
           <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-            <header className="py-6 px-4 bg-white dark:bg-gray-800 shadow-md">
+            {/* <header className="py-6 px-4 bg-white dark:bg-gray-800 shadow-md">
               <nav className="container mx-auto flex justify-between items-center">
                 <Link href="/">
                   <Image src="/logo.png" alt="CDP SDK Logo" width={120} height={40} />
@@ -56,7 +56,7 @@ export default function RootLayout({
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/coinbase/coinbase-sdk-nodejs" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/Dayitva/lero-wallet-manager" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
                         <FaGithub size={24} />
                       </a>
                     </li>
@@ -66,17 +66,14 @@ export default function RootLayout({
                       </a>
                     </li>
                   </ul>
-                  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcoinbase%2Fcdp-wallet-manager&env=CDP_API_KEY_NAME,CDP_API_KEY_SECRET,NEXT_PUBLIC_CDP_PROJECT_ID,ENCRYPTION_KEY&envDescription=Download%20CDP%20API%20key%20name%2C%20secret%2C%20project%20ID%20from%20CDP%20portal" target="_blank" rel="noopener noreferrer">
-                    <img src="https://vercel.com/button" alt="Deploy with Vercel" />
-                  </a>
                 </div>
               </nav>
-            </header>
+            </header> */}
             <main>
               {children}
             </main>
-            <footer className="py-10 text-center text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 mt-20 border-t border-lavender-200 dark:border-gray-700">
-              <p>&copy; 2024 CDP SDK. All rights reserved.</p>
+            {/* <footer className="py-10 text-center text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 mt-20 border-t border-lavender-200 dark:border-gray-700">
+              <p>&copy; 2024 Lero. All rights reserved.</p>
               <p>
                 By using this app, you agree to the{' '}
                 <a 
@@ -88,7 +85,7 @@ export default function RootLayout({
                   Terms of Service
                 </a>
               </p>
-            </footer>
+            </footer> */}
           </div>
         </Providers>
       </body>

@@ -1,4 +1,4 @@
-import { Coinbase } from "@coinbase/coinbase-sdk";
+import { Coinbase, ServerSigner } from "@coinbase/coinbase-sdk";
 
 if (!process.env.CDP_API_KEY_NAME || !process.env.CDP_API_KEY_SECRET) {
   throw new Error("CDP_API_KEY_NAME and CDP_API_KEY_SECRET must be set");
@@ -13,3 +13,6 @@ Coinbase.configure({
     privateKey: apiKeyString.replaceAll("\\n", "\n") as string,
 });
 
+// Coinbase.useServerSigner = true;
+// ServerSigner.getDefault();
+console.log("CDP SDK has been successfully configured.");

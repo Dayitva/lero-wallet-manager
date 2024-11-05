@@ -6,7 +6,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <span className="font-bold text-xl text-gray-900">CDP Wallet Manager</span>
+            <span className="font-bold text-xl text-gray-900">Lero Wallet Manager</span>
           </div>
         </div>
       </div>
